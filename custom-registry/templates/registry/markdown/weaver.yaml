@@ -1,0 +1,9 @@
+templates:
+  - pattern: metrics.md.j2
+    filter: '.groups | map(select(.type == "metric"))'
+    application_mode: single
+    file_name: metrics.md
+  - pattern: spans.md.j2
+    filter: '.groups | map(select(.type == "span"))'
+    application_mode: single
+    file_name: spans.md

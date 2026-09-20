@@ -1,0 +1,26 @@
+# Metrics
+
+{% for metric in ctx %}
+## `{{ metric.metric_name }}`
+
+{{ metric.brief }}
+
+| Property | Value |
+| --- | --- |
+| Instrument | `{{ metric.instrument }}` |
+| Unit | `{{ metric.unit }}` |
+| Stability | `{{ metric.stability }}` |
+
+{% if metric.note %}
+{{ metric.note }}
+{% endif %}
+
+### Attributes
+
+| Name | Type | Requirement | Description |
+| --- | --- | --- | --- |
+{% for attribute in metric.attributes %}
+| `{{ attribute.name }}` | `{{ attribute.type }}` | {{ attribute.requirement_level }} | {{ attribute.brief }} |
+{% endfor %}
+
+{% endfor %}

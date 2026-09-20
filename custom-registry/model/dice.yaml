@@ -1,0 +1,38 @@
+groups:
+  - id: registry.dice
+    type: attribute_group
+    stability: development
+    brief: Attributes describing dice operations.
+    attributes:
+      - id: roll.value
+        type: int
+        stability: development
+        brief: The value produced by rolling the die.
+        examples: [1, 6]
+        requirement_level: required
+  - id: span.dice.roll
+    type: span
+    span_kind: internal
+    stability: development
+    brief: Represents rolling a die.
+    attributes:
+      - ref: roll.value
+        requirement_level: required
+  - id: metric.dice.rolls
+    type: metric
+    metric_name: dice.rolls
+    instrument: counter
+    unit: "{roll}"
+    stability: development
+    brief: The number of dice rolls, partitioned by roll value.
+    attributes:
+      - ref: roll.value
+        requirement_level: required
+imports:
+  spans:
+    - span.http.*
+  metrics:
+    - http.*
+  attribute_groups:
+    - registry.telemetry
+    - registry.service

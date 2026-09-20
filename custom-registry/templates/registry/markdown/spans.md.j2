@@ -1,0 +1,25 @@
+# Spans
+
+{% for span in ctx %}
+## `{{ span.id }}`
+
+{{ span.brief }}
+
+| Property | Value |
+| --- | --- |
+| Kind | `{{ span.span_kind }}` |
+| Stability | `{{ span.stability }}` |
+
+{% if span.note %}
+{{ span.note }}
+{% endif %}
+
+### Attributes
+
+| Name | Type | Requirement | Description |
+| --- | --- | --- | --- |
+{% for attribute in span.attributes %}
+| `{{ attribute.name }}` | `{{ attribute.type }}` | {{ attribute.requirement_level }} | {{ attribute.brief }} |
+{% endfor %}
+
+{% endfor %}
