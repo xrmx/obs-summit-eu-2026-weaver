@@ -3,7 +3,7 @@
 
 ## `span.dice.roll`
 
-Represents rolling a die.
+Represents rolling a dice.
 
 | Property | Value |
 | --- | --- |
@@ -17,7 +17,7 @@ Represents rolling a die.
 | Name | Type | Requirement | Description |
 | --- | --- | --- | --- |
 
-| `roll.value` | `int` | required | The value produced by rolling the die. |
+| `roll.value` | `int` | required | The value produced by rolling the dice. |
 
 
 

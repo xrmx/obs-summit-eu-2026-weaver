@@ -7,14 +7,14 @@ groups:
       - id: roll.value
         type: int
         stability: development
-        brief: The value produced by rolling the die.
+        brief: The value produced by rolling the dice.
         examples: [1, 6]
         requirement_level: required
   - id: span.dice.roll
     type: span
     span_kind: internal
     stability: development
-    brief: Represents rolling a die.
+    brief: Represents rolling a dice.
     attributes:
       - ref: roll.value
         requirement_level: required

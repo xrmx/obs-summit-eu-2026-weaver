@@ -18,7 +18,7 @@ The number of dice rolls, partitioned by roll value.
 | Name | Type | Requirement | Description |
 | --- | --- | --- | --- |
 
-| `roll.value` | `int` | required | The value produced by rolling the die. |
+| `roll.value` | `int` | required | The value produced by rolling the dice. |
 
 
 
