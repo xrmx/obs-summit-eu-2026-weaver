@@ -1,0 +1,4 @@
+[[live-check.finding_filters]]
+exclude = ["missing_attribute"]
+signal_type = "resource"
+sample_names = ["telemetry.auto.version"]
