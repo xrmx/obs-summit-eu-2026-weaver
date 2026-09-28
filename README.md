@@ -5,6 +5,8 @@ Flask application that rolls six-sided dice. It shows the progression from
 automatic instrumentation to application-defined telemetry backed by custom
 semantic conventions.
 
+Refer to [Weaver documentation on definining your own telemetry schema](https://github.com/open-telemetry/weaver/blob/main/docs/define-your-own-telemetry-schema.md) for more details.
+
 ## Repository contents
 
 | Path | Description |
@@ -12,7 +14,7 @@ semantic conventions.
 | [`rolldice/`](rolldice/) | Baseline Flask application instrumented automatically with the OpenTelemetry Python distribution. |
 | [`rolldice-custom/`](rolldice-custom/) | Extended version of the application with a custom `roll` span, a `dice.rolls` counter, and the `roll.value` attribute. |
 | [`custom-registry/`](custom-registry/) | Weaver semantic-convention registry for the custom dice telemetry, including model definitions, documentation templates, generated docs, and live-check configuration. |
-
+G
 The custom registry imports the standard OpenTelemetry HTTP conventions and
 adds conventions for the dice-roll operation. Its generated reference
 documentation is available in
@@ -65,3 +67,4 @@ make live-check   # Check emitted telemetry against the registry
 
 The registry source is in `custom-registry/model/`. The templates under
 `custom-registry/templates/` control the generated Markdown output.
+
